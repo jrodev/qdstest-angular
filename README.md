@@ -1,28 +1,7 @@
 # QdstestAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
+Esta es la aplicacion REST API que se encuentra en Heroku son 2 cliente y API
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# qdstest-angular
+- [Cli Angular https://qdstest-angular.herokuapp.com](https://qdstest-angular.herokuapp.com/).
+- [API Laravel https://qdstest-laravel.herokuapp.com/](https://qdstest-laravel.herokuapp.com/).
+- [API Test](https://qdstest-laravel.herokuapp.com/api/arreglo/create).
