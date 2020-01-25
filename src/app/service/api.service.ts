@@ -11,21 +11,31 @@ import { retry, catchError } from 'rxjs/operators';
 
 export class ApiService {
 
-  // Define API
-  apiURL = 'https://qdstest-laravel.herokuapp.com/api';
+  // Define API  
+  apiURL = 'http://qdstest.laravel.local/api';
+  //apiURL = 'https://qdstest-laravel.herokuapp.com/api';
 
   constructor(private http: HttpClient) { }
 
   // Http Options
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({ 
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    })
   }  
 
-  // HttpClient API get() method => Fetch employees list
-  getTestArreglo(): Observable<Arreglo> {
+  // Testeamos el api laravel para corregir problemas de cors
+  getTestArreglo () : Observable<Arreglo> {
     return this.http.get<Arreglo>(this.apiURL + '/arreglo/create')
     .pipe( retry(1), catchError(this.handleError) )
   }
+
+  // Creamos el nuevo arreglo en base al anterior (Ejecuta el metodo arreglo.store de laravel)
+  createNuevoArreglo (arreglo:Arreglo) : Observable<Arreglo> {
+    return this.http.post<Arreglo>(this.apiURL + '/arreglo', JSON.stringify(arreglo), this.httpOptions)
+    .pipe( retry(1), catchError(this.handleError) )
+  }  
 
   // Error handling 
   handleError(error) {
