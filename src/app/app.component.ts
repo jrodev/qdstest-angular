@@ -16,6 +16,9 @@ export class AppComponent {
 
   lado: number = 2
 
+  // Para saber si se desea rotar todo o no
+  rotarTodo: boolean = false
+
   aArrayIn = []
   aArrayOut = []
 
@@ -93,7 +96,7 @@ export class AppComponent {
   postCreateArreglo () {
 
     this.postArreglo = new Arreglo
-    this.postArreglo.id = 0
+    this.postArreglo.id = this.rotarTodo ? 1 : 0
     this.postArreglo.input = this.aArrayIn
     this.postArreglo.output = []
 

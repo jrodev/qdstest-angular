@@ -1,5 +1,7 @@
 <div class="container">
   <h3 class="title-main text-center">QDS TEST - Rotando Arreglos de NxN</h3>
+    <b> &nbsp; Desea rotar todo el Array ?</b> &nbsp; &nbsp; &nbsp; 
+    <input type="checkbox" class="form-check-input" [(ngModel)]="rotarTodo" />
   <div class="row">
     <div class="col-sm">
       <div class="card text-center">
@@ -9,7 +11,6 @@
             <div class="col-sm-7"><span class="align-middle"> Ingrese Dimension N </span></div>
             <div class="col-sm-5"> <input type="number" class="form-control inp-size" value="2" (change)="changeFillLados($event)" /></div>            
           </div>
-
         </div>
         <div class="card-body" style="padding-bottom:11px !important">
 

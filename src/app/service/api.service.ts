@@ -12,8 +12,8 @@ import { retry, catchError } from 'rxjs/operators';
 export class ApiService {
 
   // Define API  
-  //apiURL = 'http://qdstest.laravel.local/api';
-  apiURL = 'https://qdstest-laravel.herokuapp.com/api';
+  apiURL = 'http://qdstest.laravel.local/api';
+  //apiURL = 'https://qdstest-laravel.herokuapp.com/api';
 
   constructor(private http: HttpClient) { }
 
